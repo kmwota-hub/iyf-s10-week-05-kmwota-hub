@@ -2,34 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
-        <h1>My To-Do List</h1>
         
+        <!-- Header -->
+        <header>
+            <h1>My To-Do List</h1>
+            <p class="subtitle">Built with DOM manipulation & event listeners</p>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat">
+                <span>TOTAL</span>
+                <strong id="total-count">0</strong>
+            </div>
+            <div class="stat">
+                <span>ACTIVE</span>
+                <strong id="active-count">0</strong>
+            </div>
+            <div class="stat">
+                <span>COMPLETED</span>
+                <strong id="completed-count">0</strong>
+            </div>
+        </div>
+
+        <!-- Input -->
         <form id="todo-form">
-            <input type="text" id="todo-input" placeholder="What needs to be done?" required>
-            <button type="submit">Add</button>
+            <input 
+                type="text" 
+                id="todo-input" 
+                placeholder="Add a new task..." 
+                autocomplete="off"
+                required
+            >
+            <button type="submit" class="btn">Add Task</button>
         </form>
-        
+
+        <!-- Filters -->
         <div class="filters">
             <button class="filter active" data-filter="all">All</button>
             <button class="filter" data-filter="active">Active</button>
             <button class="filter" data-filter="completed">Completed</button>
         </div>
-        
-        <ul id="todo-list">
-            <!-- Tasks will be added here -->
-        </ul>
-        
+
+        <!-- Todo List -->
+        <ul id="todo-list"></ul>
+
+        <!-- Footer -->
         <div class="stats">
-            <span id="items-left">0 items left</span>
             <button id="clear-completed">Clear Completed</button>
         </div>
+
     </div>
-    
+
     <script src="app.js"></script>
 </body>
 </html>
