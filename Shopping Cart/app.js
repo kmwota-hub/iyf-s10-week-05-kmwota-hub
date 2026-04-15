@@ -1,8 +1,8 @@
 const state = {
     products: [
-        { id: 1, name: "Laptop", price: 999, image: "laptop.jpg" },
-        { id: 2, name: "Phone", price: 699, image: "phone.jpg" },
-        { id: 3, name: "Headphones", price: 199, image: "headphones.jpg" }
+        { id: 1, name: "Laptop", price: 999, image: "images/laptop.png" },
+        { id: 2, name: "Phone", price: 699, image: "images/phone.png" },
+        { id: 3, name: "Headphones", price: 199, image: "images/headphones.png" }
     ],
     cart: [] // { productId, quantity }
 };
