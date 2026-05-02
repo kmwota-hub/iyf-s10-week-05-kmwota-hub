@@ -61,7 +61,7 @@ function clearCart() {
 // TOTAL
 function getCartTotal() {
     return state.cart.reduce((total, item) => {
-        const product = state.products.find(p => p.id === item.productId);
+        const product = state.products.find((p) => p.id === item.productId);
         return total + (product.price * item.quantity);
     }, 0);
 }
@@ -75,7 +75,7 @@ function getCartCount() {
 function renderProducts() {
     const container = document.getElementById("products");
     container.innerHTML = "";
-    state.products.forEach(p => {
+    array.forEach((item, index) => {
         const div = document.createElement("div");
         div.className = "product";
         div.innerHTML = `
@@ -90,6 +90,7 @@ function renderProducts() {
 
 function renderCart() {
     const container = document.getElementById("cart");
+    if (!product) return; 
     container.innerHTML = "";
     state.cart.forEach(item => {
         const product = state.products.find(p => p.id === item.productId);
